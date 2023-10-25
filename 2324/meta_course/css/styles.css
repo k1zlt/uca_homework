@@ -1,0 +1,188 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* My code */
+
+body {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #e7c6bd;
+}
+
+header .logo img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+}
+
+header nav ul {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+	border-radius: 20px;
+}
+
+header nav ul li {
+	padding: 10px;
+	border-radius: 50px;
+	border: 1px solid white;
+	margin: 5px;
+}
+
+header nav ul li a {
+	cursor: pointer;
+	text-decoration: none;
+	color: white;
+}
+
+header nav ul li:hover {
+	transition: all ease-in 0.5s;
+	background-color: #FAF5E9;
+}
+header nav ul li a:hover {
+	transition: all ease-in 0.5s;
+	color: black;
+	text-decoration: none;
+}
+main.grid-container {
+	display: grid;
+	row-gap: 20px;
+	width: 100%;
+	grid-template-rows: 130px;
+	grid-template-columns: auto;
+}
+
+main .banner {
+	margin-top: 20px;
+	background-image: url("../images/banner.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+main .banner h4 {
+	text-align: center;
+	font-size: 30px;
+	color: white;
+}
+main .banner p {
+	text-align: center;
+	margin: 20px;
+}
+
+main .banner p a {
+	text-decoration: none;
+	color: black;
+	background-color: white;
+	padding: 15px;
+	border-radius: 20px;
+}
+
+main .card {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+main .card img {
+	height: 280px;
+}
+main .card .card-body .price {
+	margin: 10px;
+}
+
+main .card .card-body .price .old {
+	color: red;
+	text-decoration: line-through;
+}
+
+main .card .card-body .price .new {
+	color: green;
+}
+
+main .card .card-body .btn {
+	background-color: gold;
+	border: none;
+}
+
+footer {
+	margin: 20px;
+	border-top: 1px solid white;
+
+}
+
+footer p {
+	margin: 10px;
+	color: white;
+}
+
+@media (min-width: 770px) {
+	main.grid-container {
+		grid-template-columns: repeat(2, 1fr);
+		width: 100%;
+	}	
+	.banner {
+		grid-column: span 2;
+	}
+	.card3 {
+		grid-column: span 2;
+	}
+}
+@media (min-width: 1000px) {
+	main.grid-container {
+		grid-template-columns: repeat(3, 1fr);
+		width: 100%;
+	}	
+	.banner {
+		grid-column: span 3;
+	}
+	.card3 {
+		grid-column: span 1;
+	}
+}
